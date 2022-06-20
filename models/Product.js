@@ -39,13 +39,13 @@ Product.init(
       }
     },
     // category_id: Integer. References the Category model's id.
-    id: {
+    category_id: {
       type: DataTypes.INTEGER,
+      references: {
+        model: 'category',
+        key: 'id'
+      }
     },
-    references: {
-      model: 'category',
-      key: 'id'
-    }
   },
   {
     sequelize,
